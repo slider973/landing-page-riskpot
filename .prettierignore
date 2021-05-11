@@ -1,0 +1,10 @@
+build
+coverage
+.next
+next-env.d.ts
+postcss.config.js
+README.md
+tailwind.config.js
+tsconfig.json
+package.json
+.prettierrc.json

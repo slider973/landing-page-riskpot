@@ -12,7 +12,7 @@ console.log('yes')
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>La plateforme collaborative pour améliorer et piloter votre posture cybersécurité et celle de vos partenaires </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="grid-container">

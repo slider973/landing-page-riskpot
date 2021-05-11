@@ -20,8 +20,8 @@ console.log('yes')
           <Image
             src="/assets/images/logo.webp"
             alt="logo"
-            width={150}
-            height={40}
+            width={134}
+            height={35}
           />
           <span className="text-2xl">Nous arrivons bientôt... 🚀</span>
         </div>
@@ -69,10 +69,10 @@ console.log('yes')
               <Image
                 src="/assets/images/image-landing-page.webp"
                 alt="logo"
-                width={700}
-                height={700}
-                objectFit="fill"
-                objectPosition="inherit"
+                width={880}
+                height={790}
+                objectFit="cover"
+                objectPosition="responsive"
               />
             </div>
           </div>

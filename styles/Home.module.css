@@ -34,14 +34,28 @@
 }
 
 .textHeader {
-    border-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
     display: inline;
-    font-size: 50px;
     gap: normal;
-    line-height: 62.5px;
+    line-height: 63px;
+    font-family: Arial,Helvetica, serif;
     width: 37.063rem;
+    tab-size: 4;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    border: 0 solid #e5e7eb;
+    --tw-shadow: 0 0 transparent;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59,130,246,0.5);
+    --tw-ring-offset-shadow: 0 0 transparent;
+    --tw-ring-shadow: 0 0 transparent;
+    margin: 0;
+    font-weight: inherit;
+    font-size: 45px;
+    color: #fff;
+    transition: all 0.15s ease 0s;
 }
+
 
 .spanTextHeader {
     width: 33.563rem;
@@ -49,6 +63,7 @@
     color: hsl(0, 0%, 100%);
     display: inline;
     font-size: 20px;
+    font-family: futura-lt-w01-light, sans-serif;
     gap: normal;
     line-height: 33.4px;
     text-align: left;
@@ -87,7 +102,7 @@
     border-width: 0px 0px 2px;
     color: hsl(264, 83%, 52%);
     display: inline-block;
-    font-family: avenir-lt-w01_85-heavy1475544, serif;
+    font-family: Arial,Helvetica, serif;
     font-size: 14px;
     font-weight: 700;
     gap: normal;
@@ -97,7 +112,7 @@
     height: 3.125rem;
     width: 27.375rem;
 }
-.form > input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.form > input::placeholder {
 
 
 }

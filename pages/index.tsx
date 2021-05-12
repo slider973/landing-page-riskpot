@@ -6,7 +6,6 @@ import Image from "next/image";
 export default function Home() {
   const registerUser = async event => {
     event.preventDefault()
-console.log('yes')
 
   }
   return (

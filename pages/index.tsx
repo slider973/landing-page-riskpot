@@ -2,16 +2,19 @@ import Head from "next/head";
 import React from "react";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import Link from 'next/link'
 
-export default function Home() {
-  const registerUser = async event => {
-    event.preventDefault()
-
-  }
+const Home = () => {
+  const registerUser = async (event) => {
+    event.preventDefault();
+  };
   return (
     <>
       <Head>
-        <title>La plateforme collaborative pour améliorer et piloter votre posture cybersécurité et celle de vos partenaires </title>
+        <title>
+          La plateforme collaborative pour améliorer et piloter votre posture
+          cybersécurité et celle de vos partenaires{" "}
+        </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="grid-container">
@@ -35,9 +38,36 @@ export default function Home() {
                 La plateforme collaborative pour améliorer et piloter votre
                 posture cybersécurité et celle de vos partenaires
               </span>
+              <div className={styles.containerBottomDescription}>
+                <div className={styles.StylableButtonContainer}>
+                  <span className={styles.StylableButtonLabel}>
+                    Évaluation des risques de l'entreprise
+                  </span>
+
+                  <span className={styles.StylableButtonLabel}>
+                    Gestion des risques liés aux tiers
+                  </span>
+                </div>
+                <div className={styles.StylableButtonContainer}>
+                  <span
+                    className={styles.StylableButtonLabel}
+                    style={{ backgroundColor: "#a06bf1" }}
+                  >
+                    Sécurité des applications Web
+                  </span>
+
+                  <span
+                    className={styles.StylableButtonLabel}
+                    style={{ backgroundColor: "#d0b5f8" }}
+                  >
+                    Sensibilisation à la cybersécurité
+                  </span>
+                </div>
+              </div>
               <p className={styles.subTextHeader}>
                 <span>
-                  Nous sommes presque prêts pour le lancement ! Soyez le premier
+                  Nous sommes presque prêts pour le lancement ! <br/>
+                  Soyez le premier
                   à le savoir&nbsp;
                 </span>
                 <span>
@@ -60,6 +90,16 @@ export default function Home() {
                   </span>
                 </span>
               </p>
+              <div className={styles.StylableButtonContainer}>
+                      <span className={styles.StylableButtonLabel}>
+                  <Link
+                      href="#inscriptionForm"
+                  >
+                    Rester informé
+                  </Link>
+                </span>
+              </div>
+
             </div>
           </div>
 
@@ -78,25 +118,36 @@ export default function Home() {
         </div>
         <div className={styles.subContent}>
           <div className={styles.subContentText}>
-            <span className={styles.subContentTextFirstSpan}>Recevez les dernières nouvelles !</span>
+            <span className={styles.subContentTextFirstSpan}>
+              Recevez les dernières nouvelles !
+            </span>
             <span className={styles.subContentTextSecondSpan}>
               Nous sommes presque prêts pour le lancement ! Soyez les premiers à
               le savoir 🚀
             </span>
-            <div className={styles.containerForm}>
-              <form onSubmit={registerUser} method="POST" className={styles.form}>
-                <input id="name" type="text" autoComplete="name" placeholder="E-mail du contact*" required/>
+            <div className={styles.containerForm} id='inscriptionForm'>
+              <form
+                onSubmit={registerUser}
+                method="POST"
+                className={styles.form}
+              >
+                <input
+                  id="name"
+                  type="text"
+                  autoComplete="name"
+                  placeholder="E-mail du contact*"
+                  required
+                />
                 <button type="submit">Envoyer</button>
               </form>
             </div>
           </div>
         </div>
         <div className={styles.footer}>
-          <span>
-            ©2023 by RiskSpot. Proudly created by Jonathan lemaine
-          </span>
+          <span>©2023 by RiskSpot. Proudly created by Jonathan lemaine</span>
         </div>
       </div>
     </>
   );
-}
+};
+export default Home;

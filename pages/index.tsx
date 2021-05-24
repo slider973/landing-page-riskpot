@@ -1,8 +1,8 @@
 import Head from "next/head";
-import React from "react";
+import React  from "react";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 
 const Home = () => {
   const registerUser = async (event) => {
@@ -16,14 +16,16 @@ const Home = () => {
           cybersécurité et celle de vos partenaires{" "}
         </title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=yes"  />
       </Head>
-      <div className="grid-container">
+      <div className={`grid-container ${styles.gridContainer}`}>
         <div className={styles.header}>
           <Image
             src="/assets/images/logo.webp"
             alt="logo"
             width={134}
             height={35}
+            layout="responsive"
           />
           <span className="text-2xl">Nous arrivons bientôt... 🚀</span>
         </div>
@@ -66,9 +68,8 @@ const Home = () => {
               </div>
               <p className={styles.subTextHeader}>
                 <span>
-                  Nous sommes presque prêts pour le lancement ! <br/>
-                  Soyez le premier
-                  à le savoir&nbsp;
+                  Nous sommes presque prêts pour le lancement ! <br />
+                  Soyez le premier à le savoir&nbsp;
                 </span>
                 <span>
                   <span>
@@ -91,15 +92,10 @@ const Home = () => {
                 </span>
               </p>
               <div className={styles.StylableButtonContainer}>
-                      <span className={styles.StylableButtonLabel}>
-                  <Link
-                      href="#inscriptionForm"
-                  >
-                    Rester informé
-                  </Link>
+                <span className={styles.StylableButtonLabel}>
+                  <Link href="#inscriptionForm">Rester informé</Link>
                 </span>
               </div>
-
             </div>
           </div>
 
@@ -125,7 +121,7 @@ const Home = () => {
               Nous sommes presque prêts pour le lancement ! Soyez les premiers à
               le savoir 🚀
             </span>
-            <div className={styles.containerForm} id='inscriptionForm'>
+            <div className={styles.containerForm} id="inscriptionForm">
               <form
                 onSubmit={registerUser}
                 method="POST"

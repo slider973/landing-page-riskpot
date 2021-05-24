@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
+    gap: 0 0;
     grid-template-areas:
     "header"
     "content"
@@ -106,7 +106,7 @@
 .form > input {
     background-color: hsla(284, 59%, 59%, 0.1);
     border-color: hsla(284, 59%, 59%, 0);
-    border-width: 0px 0px 2px;
+    border-width: 0 0 2px;
     color: hsl(264, 83%, 52%);
     display: inline-block;
     font-family: Arial, Helvetica, serif;
@@ -139,7 +139,7 @@
 }
 
 .StylableButtonContainer span:hover {
-background-color: #d0b5f8;
+    background-color: #d0b5f8;
     cursor: pointer;
 }
 
@@ -160,6 +160,7 @@ background-color: #d0b5f8;
     font-size: 0.825rem;
     letter-spacing: 0.094rem;
 }
+
 div.content > div:nth-child(1) > div > div.StylableButtonContainer > span {
     display: flex;
     width: 10.563rem;
@@ -238,6 +239,50 @@ div.content > div:nth-child(1) > div > div.StylableButtonContainer > span {
 .subContentText {
     display: flex;
     flex-direction: column;
+}
+.gridContainer{}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles */
+
+
+    .header {
+        grid-area: header;
+        height: 6.25rem;
+        width: 100%;
+        background-color: #01203a;
+        display: flex;
+        align-items: center;
+        color: white;
+        position: fixed;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .gridContainer {
+        width: 100%;
+        display: inline-table;
+    }
+
+    .content {
+        grid-area: content;
+        height: 56.125rem;
+        background-color: #01203a;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .contentRight {
+        padding-left: 3rem;
+        flex-basis: 52rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @font-face {

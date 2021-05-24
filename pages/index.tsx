@@ -25,7 +25,6 @@ const Home = () => {
             alt="logo"
             width={134}
             height={35}
-            layout="responsive"
           />
           <span className="text-2xl">Nous arrivons bientôt... 🚀</span>
         </div>
